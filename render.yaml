@@ -4,9 +4,21 @@ services:
     env: python
     plan: free
     rootDir: backend
-    buildCommand: pip install -r requirements-cctv.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     autoDeploy: true
     envVars:
-      - key: AI_PROVIDER_MODE
-        value: mock
+      - key: CCTV_SOURCE
+        value: https://www.youtube.com/@ttdevasthanams/live
+      - key: CCTV_CAMERA_NAME
+        value: TTD Official Live
+      - key: CCTV_ZONE_AREA_M2
+        value: "250"
+      - key: CCTV_CAPACITY_PEOPLE
+        value: "250"
+      - key: CCTV_FLOW_LINE_Y
+        value: "0.55"
+      - key: CCTV_DENSITY_THRESHOLD
+        value: "2.0"
+      - key: PYTHON_VERSION
+        value: "3.11.11"
