@@ -1,0 +1,1 @@
+import type{NodeKind}from'@/types';export function nodeKindColor(k:NodeKind){return k==='entry'?'#52c878':k==='exit'?'#61b7d8':k==='stage'?'#d9a441':k==='food'?'#e58b3a':k==='medical'?'#ef4b4b':'#7f8b96'}export function nodeKindRadius(k:NodeKind){return k==='entry'||k==='exit'?10:k==='stage'?14:7}
