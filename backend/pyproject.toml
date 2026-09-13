@@ -1,0 +1,17 @@
+[project]
+name = "crowd-optimiser-backend"
+version = "1.0.0"
+description = "Crowd Optimiser FastAPI backend"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.13.4",
+  "python-multipart>=0.0.9",
+  "opencv-python>=4.10.0",
+  "numpy>=1.26.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
